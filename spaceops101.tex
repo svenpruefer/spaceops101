@@ -66,15 +66,15 @@
   \frametitle{... but instead}
     \begin{figure}[!ht]
     \centering
-    \includegraphics[width=1\textwidth]{segments.png}
+    \includegraphics[width=\textwidth]{segments.png}
   \end{figure}
 \end{frame}
 
 \begin{frame}
   \frametitle{... but instead}
-    \begin{figure}[!ht]
+  \begin{figure}[!ht]
     \centering
-    \includegraphics[width=1\textwidth]{segments-red.png}
+    \includegraphics[width=\textwidth]{segments-red.png}
   \end{figure}
 \end{frame}
 
@@ -108,81 +108,214 @@
 
 \section{Basics of Spaceflight}
 
+\begin{frame}
+  \frametitle{}
+  \vfill
+  \begin{center}
+    \Large Basics of Spaceflight
+  \end{center}
+  \vfill
+\end{frame}
+
 \subsection{Orbits}
 
 \begin{frame}
-  \frametitle{Why does a satellite not fall down?}
+  \frametitle{Why does a space craft not fall down?}
   \pause
-  TODO add planet + satellite picture
+  \begin{figure}[b]
+    \centering
+    \includegraphics[width=0.8\textwidth]{gravity1.png}
+  \end{figure}
 \end{frame}
 
 \begin{frame}
-  \frametitle{LEO, MEO, GEO}
-  \pause
-  TODO add picture on distances
+  \frametitle{Why does a space craft not fall down?}
+  \begin{figure}[b]
+    \centering
+    \includegraphics[width=0.8\textwidth]{gravity2.png}
+  \end{figure}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Some Statistics}
-  \pause
-  TODO add overview on number of satellites etc.
+  \frametitle{LEO, MEO and GEO}
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{orbit1.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{LEO, MEO and GEO}
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{orbit2.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{LEO, MEO and GEO}
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{orbit3.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{LEO, MEO and GEO}
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{orbit4.png}
+  \end{figure}
 \end{frame}
 
 \subsection{Communications}
 
 \begin{frame}
-  \frametitle{Pass}
+  \frametitle{Contacts and Passes}
   \pause
-  TODO add picture showing pass
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{pass1.png}
+  \end{figure}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Link Budget}
+  \frametitle{Contacts and Passes}
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{pass2.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Contacts and Passes}
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{pass3.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Contacts and Passes}
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{pass4.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Ground Tracks}
   \pause
-  TODO add picture link budget
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{ground-track.jpg}
+  \end{figure}
 \end{frame}
 
 \begin{frame}
   \frametitle{Frequency Range}
   \pause
-  TODO add picture absorption in athmosphere
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{atmosphere-spectrum.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Frequency Range}
+  Satellite communication takes place (most commonly) in
+  \begin{itemize}
+  \item UHF: 430 MHz (CubeSATs) \pause
+  \item L-Band: 1-2 Ghz (GNSS, Communications, ADS-B) \pause
+  \item S-Band: 2-4 GHz (Telemetry \& Commanding) \pause
+  \item X-Band: 8-12 GHz (Payload \& Deep Space) \pause
+  \item Ku-Band: 12-18 GHz (TV) \pause
+  \item Ka-Band: 26-40 GHz (?)
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Up- and Downlink}
   \pause
-  TODO explain purpose of up- and downlinks
+  A satellite connection is used for
+  \begin{itemize}
+  \item downloading satellite telemetry ("house keeping data") \pause
+  \item downloading payload data \pause
+  \item uploading commands \pause
+  \item uploading new software \pause
+  \item receiving and sending signals (as a relay)
+  \end{itemize}
 \end{frame}
 
 \subsection{Phases of Mission Operations}
 
 \begin{frame}
-  \frametitle{LEOP}
-  \pause
-  TODO explain purpose of LEOP
+  \frametitle{}
+  \vfill
+  \begin{center}
+    \Large Phases of Mission Operations
+  \end{center}
+  \vfill
 \end{frame}
 
 \begin{frame}
-  \frametitle{Commisioning or IOT}
+  \frametitle{LEOP}
   \pause
-  TODO explain purpose of IOT
+  \textbf{L}aunch and \textbf{E}arly \textbf{O}rbit \textbf{P}hase \pause
+  \begin{itemize}
+  \item Starts right after separation from transfer vehicle \pause 
+  \item Takes 3 days to 4 weeks \pause
+  \item 24h per day monitoring and strict agenda \pause
+  \item Most important steps: \pause
+    \begin{itemize}
+    \item First Acquisition \pause
+    \item Unfolding of solar panels \pause
+    \item Transfer Maneuvers to reach final orbit \pause
+    \item First switch-on of star trackers, reaction wheels etc.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Commissioning or IOT}
+  \pause
+  \textbf{I}n \textbf{O}rbit \textbf{T}esting \pause
+  \begin{itemize}
+  \item Follows LEOP \pause
+  \item Takes 1 to 6 months \pause
+  \item Most important steps: \pause
+    \begin{itemize}
+    \item Turn-on of payload \pause
+    \item Verification of payload \pause
+    \item Test of routine operations
+    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Routine}
   \pause
-  TODO explain purpose of Routine (mention monitoring + machine learning)
+  \begin{itemize}
+  \item Main phase of operations \pause
+  \item As much automatic operations as possible \pause
+  \item Monitoring of the space craft \pause
+  \item Handling of contingencies \pause
+  \item Adaptations to changing mission objectives or changing properties of the space craft
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{EOL}
+  \frametitle{End of Life}
   \pause
-  TODO explain EOL
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{lifetime.png}
+  \end{figure}
 \end{frame}
 
 \section{Procedures}
 
-\subsection{TC, TTC and Telemetry}
+\subsection{TC, TTC, Telemetry and Procedures}
 
 \begin{frame}
   \frametitle{TCs and TTCs}
@@ -191,7 +324,7 @@
 \end{frame}
 
 \begin{frame}
-  \frametitle{Examples for TTCs}
+  \frametitle{Examples for TTCs during a maneuver}
   \pause
   TODO example TTC
 \end{frame}
@@ -202,29 +335,28 @@
   TODO example TTC
 \end{frame}
 
-\subsection{Flight Procedures}
-
 \begin{frame}
-  \frametitle{Purpose of Flight Procedures}
+  \frametitle{Flight Procedures}
   \pause
   TODO explain purpose of flight procedures
 \end{frame}
 
 \begin{frame}
-  \frametitle{Example of a Flight Procedure}
-  \pause
-  TODO picture of a flight procedure
-\end{frame}
-
-\subsection{Ground Procedures}
-
-\begin{frame}
-  \frametitle{Example of a Ground Procedure}
+  \frametitle{Ground Procedures}
   \pause
   TODO picture of a ground procedure
 \end{frame}
 
 \section{Subsystems}
+
+\begin{frame}
+  \frametitle{Control Room}
+  \pause
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{k1.jpg}
+  \end{figure}
+\end{frame}
 
 \begin{frame}
   \frametitle{FDS and AOCS}
