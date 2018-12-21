@@ -313,41 +313,117 @@
   \end{figure}
 \end{frame}
 
-\section{Procedures}
+\section{Commanding and Monitoring}
 
-\subsection{TC, TTC, Telemetry and Procedures}
+\begin{frame}
+  \frametitle{}
+  \vfill
+  \begin{center}
+    \Large Commanding and Monitoring
+  \end{center}
+  \vfill
+\end{frame}
+
+\subsection{TC, TTC and Telemetry}
 
 \begin{frame}
   \frametitle{TCs and TTCs}
   \pause
-  TODO explain TCs and TTCs
-\end{frame}
-
-\begin{frame}
-  \frametitle{Examples for TTCs during a maneuver}
-  \pause
-  TODO example TTC
+  \vfill
+  Telecommands (TCs) are used to command the S/C \pause
+  \vfill
+  A TC \pause
+  \begin{itemize}
+  \item can depend on parameters, \pause
+  \item may set values on the S/C, \pause
+  \item may switch devices on the S/C or \pause
+  \item transport some binary blob \pause
+  \end{itemize}
+  \vfill
+  TCs can be time-tagged $\Longrightarrow$ TTC
+  \vfill
 \end{frame}
 
 \begin{frame}
   \frametitle{Telemetry}
   \pause
-  TODO example TTC
+  \vfill
+  Telemetry parameters describe the state of the S/C \pause
+  \vfill
+  They can contain
+  \begin{itemize}
+  \item binary flags, \pause
+  \item numerical data or \pause
+  \item binary data \pause
+  \end{itemize}
+  \vfill
+  Should consume as less bandwidth as possible! \pause
+  \vfill
+  A S/C can easily have 20000 such parameters \pause
+  \vfill
+  After processing this is saved in a space craft database
 \end{frame}
+
+\begin{frame}
+  \frametitle{Examples for TTCs during a maneuver}
+  \pause
+  \centering
+  \begin{tabular}{|c|c|}\hline
+    Time & Action \\ \hline
+    $t_0-00:60:00$ & Check preconditions \\
+    $t_0-00:59:52$ & Heat thrusters \\
+    $t_0-00:11:00$ & Switch on additional telemetry \\
+    $t_0-00:09:40$ & Turn off safeguards \\
+    $t_0-00:06:40$ & Rotating space craft \\
+    $t_0$ & Burn starts \\
+    $t_0+1.1\cdot \text{burn time}$ & Additional safeguard STOP command \\
+    $t_0+00:00:01$ & Rotate back \\
+    $t_0+00:13:00$ & Turn off heaters \\
+    $t_0+00:14:54$ & Turn back to old mode \\ \hline
+  \end{tabular}
+\end{frame}
+
+\subsection{Flight and Ground Procedures}
 
 \begin{frame}
   \frametitle{Flight Procedures}
   \pause
-  TODO explain purpose of flight procedures
+  A flight procedure (FOP) is a sequence of \pause
+  \begin{itemize}
+  \item TM-checks, \pause
+  \item TCs and \pause
+  \item some simple logics such as loops or conditions
+  \end{itemize}
+  \vfill
+  Does a specific task on the S/C in a consistent and safe manner
+  \vfill
+  Preparation and Validation of FOPs is one of the main works in preparation phase for the mission
 \end{frame}
 
 \begin{frame}
   \frametitle{Ground Procedures}
   \pause
-  TODO picture of a ground procedure
+  Similarly to FOPs, fround procedures (GOPs) are explicit sequences how to do a specific task in the ground segment \pause
+  \vfill
+  Needs to be simple, concise and doable at 3am by anybody in the OPS team
+  \vfill
+  Examples: \pause
+  \begin{itemize}
+  \item How to restart some software \pause
+  \item How to command a change of the mode of a S/C via a FOP
+  \end{itemize}
 \end{frame}
 
 \section{Subsystems}
+
+\begin{frame}
+  \frametitle{}
+  \vfill
+  \begin{center}
+    \Large Subsystems
+  \end{center}
+  \vfill
+\end{frame}
 
 \begin{frame}
   \frametitle{Control Room}
@@ -361,41 +437,74 @@
 \begin{frame}
   \frametitle{FDS and AOCS}
   \pause
-  TODO explain purpose FDS and AOCS, mention Fortran
+  Flight Dynamics (FDS) does \emph{orbit propagation},\pause \emph{ground station visibilities}\pause and \emph{maneuver calculations}
+  \vfill
+  Attitude and Orbital Control System (AOCS) is responsible for S/C operations regarding \emph{attitude},\pause \emph{tumbling},\pause \emph{maneuver execution}\pause and \emph{positioning}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Safe Modes}
+  \frametitle{Target-Pointing-Mode}
   \pause
-  TODO add picture for various modes
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{target-pointing-mode.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Sun-Pointing-Mode}
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\textwidth]{sun-pointing-mode.png}
+  \end{figure}
 \end{frame}
 
 \begin{frame}
   \frametitle{Data and TM/TC}
   \pause
-  TODO explain purpose Data and TM/TC
+  Data and TM/TC are responsible for
+  \begin{itemize}
+  \item Acquisition and maintenance of signal/TM-flow, \pause
+  \item Ranging, \pause
+  \item Data processing    
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{SCOS}
-  \pause
-  TODO add picture SCOS
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{scos.jpg}
+  \end{figure}
 \end{frame}
 
 \begin{frame}
   \frametitle{PTR}
   \pause
-  TODO explain PTR, show heat curve, mention MLI
+  Power and Thermal (PTR) monitor
+  \begin{itemize}
+  \item battery state and \pause
+  \item temperatures on the S/C
+  \end{itemize}
+  \vfill
+  Temperatures can easily range from $-60\deg C$ to $+100\deg C$
+  \vfill
+  Long term monitoring very important
 \end{frame}
 
 \begin{frame}
-  \frametitle{MIPL}
+  \frametitle{MiPL}
   \pause
-  TODO explain purpose
+  Mission Planning (MiPL) takes care of
+  \begin{itemize}
+  \item planning S/C activities in a consistent and conflict-free manner, \pause
+  \item executing automated FOPs in routine operations and \pause
+  \item detailed planning during the LEOP
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
-  \frametitle{SoE}
+  \frametitle{Sequence of Events}
   \pause
   TODO add picture sample SoE
 \end{frame}
@@ -403,36 +512,98 @@
 \section{Contingencies}
 
 \begin{frame}
+  \frametitle{}
+  \vfill
+  \begin{center}
+    \Large Contingencies
+  \end{center}
+  \vfill
+\end{frame}
+
+\begin{frame}
   \frametitle{Flight and Engineering Model}
   \pause
-  TODO explain purpose of engineering model
+  There exists an engineering model of the S/C and simulators for \pause
+  \begin{itemize}
+  \item validation of FOPs, \pause
+  \item training of operators during preparation before launch, \pause
+  \item connection tests and \pause
+  \item reproducing errors on the flight model
+  \end{itemize}
 \end{frame}
 
 \begin{frame}
   \frametitle{Procedure in Case of Contingency}
   \pause
-  TODO add picture contingency procedure
+  \vfill
+  Stay calm! \pause
+  \vfill
+  Verify your input data \pause
+  \vfill
+  Call people responsible for that sub system \pause
+  \vfill
+  Analyze possible failure causes ("Next pass ...") \pause
+  \vfill
+  Test solution \pause
+  \vfill
+  Execute solution
 \end{frame}
 
 \begin{frame}
-  \frametitle{Example Contingency: TvSat-1}
+  \frametitle{Example Contingency: TV-SAT 1}
   \pause
-  TODO add picture and explanation TcSat-1
+  \vfill
+  German-French TV satellite from 1987 \pause
+  \vfill
+  First acquisition successful, but solar-array deployment switch said that solar panels were only partially deployed \pause
+  Some immediate actions:
+  \begin{itemize}
+  \item Check ground database for flip inversion \pause
+  \item Check output power of affected solar array \pause
+  \item Manual deployment command was sent \pause
+  \item Redundant deployment pyros were fired \pause
+  \end{itemize}
+  \vfill
+  $\Longrightarrow$ We have a problem!
 \end{frame}
 
+\begin{frame}
+  \frametitle{Example Contingency: TV-SAT 1}
+  \pause
+  \vfill
+  Offline analysis by the satellite manufacturer showed more than $50$ possible failure cases $\Longrightarrow$ We need tests! \pause
+  \vfill
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{tvsat1.png}
+  \end{figure}
+\end{frame}
 
+\begin{frame}
+  \frametitle{Example Contingency: TV-SAT 1}
+  \begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.6\textwidth]{tvsat2.png}
+  \end{figure}
+  \pause
+  More tests (Rotating S/C in another axis and measureing flux, shaking of S/C to find resonance frequencies) all showed: \pause
+  The solar panels were indeed not deployed.
+\end{frame}
 
-
-
-% \begin{frame}
-%   \frametitle{Example}
-%   \begin{figure}[!ht]
-%     \centering
-%     \def\svgwidth{0.8\textwidth}
-%     \input{../images/example-hurwitz-cover.pdf_tex}
-%   \end{figure}
-% \end{frame}
-
+\begin{frame}
+  \frametitle{Example Contingency: TV-SAT 1}
+  Recovery attempts: \pause
+  \begin{itemize}
+  \item Fast rotation (~1g centrifugal force) to loosen stirrups \pause
+  \item Performing pulsed boosts to excite resonance frequencies \pause
+  \item Heating and cooling panel and stirrups \pause
+  \item Antenna deployment causes a shock to the S/C  \pause
+  \end{itemize}
+  \vfill
+  All in all: no success :-( \pause
+  
+  But usually everything works fine!
+\end{frame}
 
 \begin{frame}
   \frametitle{Questions?}

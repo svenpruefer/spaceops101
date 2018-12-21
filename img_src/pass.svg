@@ -721,9 +721,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.98994949"
-     inkscape:cx="408.25881"
-     inkscape:cy="944.20718"
+     inkscape:zoom="0.49497475"
+     inkscape:cx="417.68913"
+     inkscape:cy="724.13783"
      inkscape:document-units="mm"
      inkscape:current-layer="layer7"
      showgrid="false"
@@ -1028,7 +1028,7 @@
      inkscape:groupmode="layer"
      id="layer5"
      inkscape:label="Ground Station Visibility"
-     style="display:inline">
+     style="display:none">
     <circle
        style="opacity:1;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:0.26499999;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="path9001"
@@ -1073,7 +1073,8 @@
   <g
      inkscape:groupmode="layer"
      id="layer7"
-     inkscape:label="Atmosphere">
+     inkscape:label="Atmosphere"
+     style="display:none">
     <circle
        style="display:inline;opacity:1;fill:#0000ff;fill-opacity:0.39215686;stroke:none;stroke-width:1;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:0.39215686"
        id="path9410"
